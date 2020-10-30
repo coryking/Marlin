@@ -493,15 +493,15 @@
 #if ENABLED(PIDTEMP)
   //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
   //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
-  //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
+  #define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify between 1 and HOTENDS values per array.
     // If fewer than EXTRUDER values are provided, the last element will be repeated.
-    #define DEFAULT_Kp_LIST {  23.89,  23.89 }
-    #define DEFAULT_Ki_LIST {   1.37,   1.37 }
-    #define DEFAULT_Kd_LIST { 104.50, 104.50 }
+    #define DEFAULT_Kp_LIST {  13.68,  14.27 }
+    #define DEFAULT_Ki_LIST {   0.73,   0.77 }
+    #define DEFAULT_Kd_LIST { 64.16, 66.05 }
   #else
     #define DEFAULT_Kp  23.89
     #define DEFAULT_Ki   1.37
